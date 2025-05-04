@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://csogj77yov0vg"]
+
+[ext_resource type="Script" uid="uid://lmd28u3f8i02" path="res://addons/BrokenProjectiles/Scripts/3D/Grenade3D.cs" id="1_e7eww"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mdw6g"]
+bounce = 0.4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mdw6g"]
+radius = 0.075
+
+[sub_resource type="SphereMesh" id="SphereMesh_mdw6g"]
+radius = 0.075
+height = 0.15
+radial_segments = 16
+rings = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdw6g"]
+albedo_color = Color(0.0433333, 0.65, 0, 1)
+metallic = 1.0
+roughness = 0.75
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sb5p6"]
+radius = 2.0
+
+[node name="Grenade3D" type="RigidBody3D" node_paths=PackedStringArray("explosionArea3D", "explosionShape3D")]
+mass = 0.9
+physics_material_override = SubResource("PhysicsMaterial_mdw6g")
+continuous_cd = true
+linear_damp = 0.3
+angular_damp = 1.5
+script = ExtResource("1_e7eww")
+DefaultRadius = 2.0
+explosionArea3D = NodePath("ExplosionArea3D")
+explosionShape3D = NodePath("ExplosionArea3D/CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_mdw6g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_mdw6g")
+surface_material_override/0 = SubResource("StandardMaterial3D_mdw6g")
+
+[node name="ExplosionArea3D" type="Area3D" parent="."]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplosionArea3D"]
+shape = SubResource("SphereShape3D_sb5p6")

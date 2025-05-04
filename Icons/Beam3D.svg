@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 16 16"
+   version="1.1"
+   sodipodi:docname="Beam3D.svg"
+   width="16"
+   height="16"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="45.406273"
+     inkscape:cx="8.3909111"
+     inkscape:cy="7.0584961"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <title
+     id="title1">laser</title>
+  <path
+     d="m 8.7653289,9.4545693 2.0683661,2.0683657 a 0.54001042,0.54001042 0 0 1 -0.76355,0.76355 L 8.0017793,10.218119 A 2.6962846,2.6962846 0 0 0 8.7653289,9.4545693 Z M 6.5211461,6.375254 a 1.5974262,1.5974262 0 0 1 1.381422,0.7886664 h 6.9749259 a 0.81127147,0.81127147 0 1 1 0,1.6212871 H 7.9000564 A 1.598682,1.598682 0 1 1 6.5186344,6.375254 Z m 0.5412662,4.232175 v 3.093129 a 0.54126626,0.54126626 0 1 1 -1.0812767,0 v -3.093129 a 2.6724237,2.6724237 0 0 0 1.0812767,0 z M 5.0417687,10.218119 2.2324586,13.028685 A 0.54126626,0.54126626 0 0 1 1.4676532,12.26388 L 4.2731957,9.4545693 A 2.6799587,2.6799587 0 0 0 5.0367453,10.218119 Z M 3.8876534,8.5152023 H 0.79452394 a 0.54126626,0.54126626 0 0 1 0,-1.0812767 H 3.8876534 a 2.7339597,2.7339597 0 0 0 0,1.0812767 z M 4.2731957,6.4945587 1.259184,3.480547 A 0.54001042,0.54001042 0 0 1 2.0227337,2.7169974 L 5.0367453,5.7310091 A 2.6799587,2.6799587 0 0 0 4.2731957,6.4945587 Z M 5.9811356,5.3404434 V 2.2473139 a 0.54126626,0.54126626 0 0 1 1.0812767,0 v 3.0931295 a 2.7339597,2.7339597 0 0 0 -1.0812767,0 z M 8.0017793,5.7259857 10.050051,3.6802253 a 0.54035545,0.54035545 0 1 1 0.76355,0.7648055 L 8.7653289,6.4945587 A 2.6962846,2.6962846 0 0 0 8.0017793,5.7259857 Z"
+     id="path1"
+     inkscape:label="Beam3D"
+     style="fill:#fc7f7f;fill-opacity:1;stroke:none;stroke-width:0.125584" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>laser</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

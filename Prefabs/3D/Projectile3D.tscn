@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmg34tf25wknd"]
+
+[ext_resource type="Script" uid="uid://bqb5hw64y3jjt" path="res://addons/BrokenProjectiles/Scripts/3D/Projectile3D.cs" id="1_0jn22"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1gn2g"]
+radius = 0.035
+height = 0.35
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6y840"]
+radius = 0.035
+height = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jn22"]
+albedo_color = Color(0.916667, 1, 0, 1)
+emission_enabled = true
+emission = Color(0.916667, 1, 0, 1)
+
+[node name="Projectile3D" type="CharacterBody3D"]
+script = ExtResource("1_0jn22")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.175)
+shape = SubResource("CapsuleShape3D_1gn2g")
+
+[node name="ProjectileMesh3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.175)
+mesh = SubResource("CapsuleMesh_6y840")
+surface_material_override/0 = SubResource("StandardMaterial3D_0jn22")
