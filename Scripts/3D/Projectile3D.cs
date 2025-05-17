@@ -16,6 +16,8 @@ public partial class Projectile3D : CharacterBody3D, IDuration, IReset
     /// </summary>
     [Signal]
     public delegate void OnHitEventHandler(Node3D collider);
+    [Signal]
+    public delegate void ActiveChangedEventHandler(bool active);
     #endregion
 
     // Default speed of the projectile.
@@ -61,6 +63,8 @@ public partial class Projectile3D : CharacterBody3D, IDuration, IReset
 
             Visible = value;
             SetDeferred(PropertyName.ProcessMode, (int)(value ? ProcessModeEnum.Inherit : ProcessModeEnum.Disabled));
+
+            EmitSignal(SignalName.ActiveChanged, value);
         }
     }
 

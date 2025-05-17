@@ -17,6 +17,8 @@ public partial class Beam3D : RayCast3D, ITick, IReset
     /// </summary>
     [Signal]
     public delegate void OnTickEventHandler();
+    [Signal]
+    public delegate void ActiveChangedEventHandler(bool active);
     #endregion
 
     private float _defaultLength = 1f;
@@ -68,6 +70,8 @@ public partial class Beam3D : RayCast3D, ITick, IReset
             Enabled = value;
             Visible = value;
             _active = value;
+
+            EmitSignal(SignalName.ActiveChanged, value);
         }
     }
 

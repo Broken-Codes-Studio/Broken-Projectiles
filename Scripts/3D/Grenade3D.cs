@@ -18,6 +18,8 @@ public partial class Grenade3D : RigidBody3D, IDuration, IReset
     /// </summary>
     [Signal]
     public delegate void OnExplodeEventHandler(Array<Node3D> colliders);
+    [Signal]
+    public delegate void ActiveChangedEventHandler(bool active);
     #endregion
 
     [ExportCategory("Fuse Duration")]
@@ -107,6 +109,8 @@ public partial class Grenade3D : RigidBody3D, IDuration, IReset
 
             Visible = value;
             SetDeferred(PropertyName.ProcessMode, (int)(value ? ProcessModeEnum.Inherit : ProcessModeEnum.Disabled));
+
+            EmitSignal(SignalName.ActiveChanged, value);
         }
     }
 
