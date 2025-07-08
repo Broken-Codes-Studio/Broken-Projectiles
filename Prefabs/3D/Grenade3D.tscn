@@ -20,6 +20,7 @@ metallic = 1.0
 roughness = 0.75
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_sb5p6"]
+resource_local_to_scene = true
 radius = 2.0
 
 [node name="Grenade3D" type="RigidBody3D" node_paths=PackedStringArray("explosionArea3D", "explosionShape3D")]

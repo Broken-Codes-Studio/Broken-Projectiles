@@ -167,6 +167,9 @@ public partial class Grenade3D : RigidBody3D, IDuration, IReset
                 explosionArea3D.AddChild(explosionShape3D);
             }
         }
+        else
+            _setRadius(Radius);
+
     }
 
     /// <summary>
@@ -184,7 +187,10 @@ public partial class Grenade3D : RigidBody3D, IDuration, IReset
         }
 
         if (colliders.Count == 0)
+        {
+            Finished();
             return;
+        }
 
         if (CoverCulling)
         {
@@ -214,6 +220,12 @@ public partial class Grenade3D : RigidBody3D, IDuration, IReset
         GD.Print($"{Name} explodsion detected {colliders.Count} colliders");
 #endif
 
+        Finished();
+
+    }
+
+    protected void Finished()
+    {
         if (!freeOnUse)
             Active = false;
         else
